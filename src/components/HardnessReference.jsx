@@ -364,7 +364,7 @@ const HARDNESS_EXPLAINED = [
     range: "C20–C68 (fastener range: C20–C45)",
     method: "Diamond Brale indenter, 150 kg load",
     use: "Most common for fasteners. High-strength carbon and alloy steels. Standard hardness scale for Grade 8, 10.9, 12.9, A490, A574.",
-    color: NAVY = "#1B3A6B",
+    color: NAVY,
   },
   {
     scale: "Rockwell B (HRB)",

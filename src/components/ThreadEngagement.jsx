@@ -558,7 +558,7 @@ export default function ThreadEngagement() {
                     <div style={{ fontSize: 10, fontWeight: 600, color: TEXT, lineHeight: 1.2 }}>{opt.drill_size.split(" ")[0]}</div>
                   </div>
                 </div>
-                <div style={{ fontSize: 11, color: MUTED, marginBottom: 6 }}<b>Best for:</b> {opt.best_for}</div>
+                <div style={{ fontSize: 11, color: MUTED, marginBottom: 6 }}><b>Best for:</b> {opt.best_for}</div>
                 <div style={{ fontSize: 12, color: TEXT, lineHeight: 1.5 }}>{opt.notes}</div>
               </div>
             ))}

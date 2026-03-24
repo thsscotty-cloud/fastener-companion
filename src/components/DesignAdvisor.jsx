@@ -764,3 +764,44 @@ export default function DesignAdvisor() {
       </div>
     );
   }
+
+  return (
+    <div style={{ fontFamily: "'DM Sans','Segoe UI',sans-serif", background: BG, minHeight: "100vh", maxWidth: 430, margin: "0 auto" }}>
+      {/* HEADER */}
+      <div style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #2C5282 100%)`, padding: "16px 20px 20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
+          <span style={{ fontSize: 20 }}>⬡</span>
+          <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase" }}>Fastener Companion</span>
+        </div>
+        <div style={{ color: WHITE, fontSize: 20, fontWeight: 800, marginBottom: 2 }}>Design Advisor</div>
+        <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11 }}>Step {step + 1} of {totalSteps}</div>
+      </div>
+      {/* PROGRESS BAR */}
+      <div style={{ background: BORDER, height: 4 }}>
+        <div style={{ background: AMBER, height: 4, width: `${progress}%`, transition: "width 0.3s" }} />
+      </div>
+      {/* QUESTION */}
+      <div style={{ padding: "24px 20px" }}>
+        <div style={{ fontSize: 36, textAlign: "center", marginBottom: 12 }}>{currentStep.icon}</div>
+        <div style={{ fontSize: 18, fontWeight: 700, color: TEXT, marginBottom: 6 }}>{currentStep.title}</div>
+        <div style={{ fontSize: 13, color: MUTED, marginBottom: 20 }}>{currentStep.subtitle}</div>
+        {currentStep.options.map(opt => (
+          <button key={opt.value} onClick={() => handleSelect(opt.value)}
+            style={{ display: "block", width: "100%", textAlign: "left",
+              background: answers[currentStep.id] === opt.value ? NAVY : WHITE,
+              color: answers[currentStep.id] === opt.value ? WHITE : TEXT,
+              border: `1px solid ${BORDER}`, borderRadius: 10, padding: "12px 16px",
+              marginBottom: 10, cursor: "pointer", fontSize: 14, fontWeight: 500 }}>
+            {opt.label}
+          </button>
+        ))}
+        {step > 0 && (
+          <button onClick={goBack}
+            style={{ background: "transparent", border: "none", color: MUTED, fontSize: 13, cursor: "pointer", marginTop: 4 }}>
+            ← Back
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}

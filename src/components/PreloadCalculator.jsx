@@ -117,19 +117,6 @@ const GRADE_DATA = {
   },
 };
 
-// K-factors by condition
-const K_FACTORS = {
-  "Dry / No Lubrication":           { k: 0.20, color: "#64748B" },
-  "Zinc Plated (dry)":              { k: 0.17, color: "#2563EB" },
-  "Slightly Oiled":                 { k: 0.17, color: "#2563EB" },
-  "Machine Oil (light lubrication)": { k: 0.15, color: "#059669" },
-  "Anti-Seize — Copper":            { k: 0.13, color: "#D97706" },
-  "Anti-Seize — Nickel":            { k: 0.13, color: "#D97706" },
-  "Anti-Seize — Moly (MoS₂)":      { k: 0.11, color: "#7C3AED" },
-  "Waxed / PTFE":                   { k: 0.15, color: "#059669" },
-  "Hot-Dip Galvanized":             { k: 0.19, color: "#64748B" },
-  "Cadmium Plated":                 { k: 0.14, color: "#0891B2" },
-};
 
 function calcTorque(size, gradeKey, kKey, preloadPct, system) {
   const kData = K_FACTORS[kKey];
@@ -137,7 +124,7 @@ function calcTorque(size, gradeKey, kKey, preloadPct, system) {
   const sizeData = system === "imperial" ? STRESS_AREAS[size] : METRIC_STRESS_AREAS[size];
   if (!kData || !gradeInfo || !sizeData) return null;
 
-  const k = kData.k;
+  const k = kData;
   const pct = preloadPct / 100;
 
   if (system === "imperial") {
