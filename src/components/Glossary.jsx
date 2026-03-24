@@ -327,38 +327,10 @@ const MEASUREMENT_TYPES = [
   },
 ];
 
-```
-
-Three more artifacts done. Here's the updated build status:
-
----
-
-**✅ Newly Completed:**
-- **How to Measure Fasteners** — diameter, length, thread pitch, head dimensions, measuring tools guide
-- **Fastener Nomenclature & Callout Guide** — imperial bolt, metric bolt, machine screw, stud bolt callout breakdowns, bolt vs screw distinction, abbreviations reference
-- **Top 10 Standards — Plain Language** — A307, A325, A354, A490, A193 B7, F593, SAE Gr.5, SAE Gr.8, ISO 8.8, ISO 10.9 — each with full plain English explanation, when to use/not use, common confusion, certifications
-
-**Ready to keep going — next up:**
-- Glossary of Terms
-- Fastener Failure Analysis
-- Installation Best Practices
-- Threadlocker Guide
-- Anti-seize Guide
-- Galvanic Corrosion Chart
-- Bolt Dimensions Chart
-- Nut Dimensions Chart
-- Washer Sizes Chart
-
-Say the word and I'll keep building.",
-    "citations": []
-  }
-
 
 // ════════════════════════════════════════════════════
 // Glossary
 // ════════════════════════════════════════════════════
-
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: ASME B18.12 (Glossary of Terms for Mechanical Fasteners),

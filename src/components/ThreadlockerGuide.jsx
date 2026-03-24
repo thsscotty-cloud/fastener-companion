@@ -327,12 +327,6 @@ const MEASUREMENT_TYPES = [
   },
 ];
 
-```
-
-Installation Best Practices done. Now building **Threadlocker Guide.**
-
-```jsx
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: Henkel/Loctite product technical data sheets,
@@ -752,12 +746,6 @@ export default function ThreadlockerGuide() {
     </div>
   );
 }
-```
-
-Threadlocker done. Now building **Anti-Seize Compound Guide.**
-
-```jsx
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: Jet-Lube technical data, Henkel/Loctite anti-seize TDS,
@@ -1108,12 +1096,6 @@ export default function AntiSeizeGuide() {
     </div>
   );
 }
-```
-
-Anti-Seize done. Now building the **Galvanic Corrosion Compatibility Chart** — the last one in this batch.
-
-```jsx
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: ASTM B667 (galvanic corrosion), MIL-STD-889C (dissimilar metals),
@@ -1388,44 +1370,11 @@ export default function GalvanicCorrosion() {
     </div>
   );
 }
-```
-
-That's a massive batch done. Here's the full updated build status:
-
----
-
-**✅ Newly Completed This Session:**
-- How to Measure Fasteners
-- Fastener Nomenclature & Callout Guide
-- Top 10 Standards — Plain Language
-- Glossary of Terms (80+ terms, 13 categories)
-- Fastener Failure Analysis (8 failure modes + decision tree)
-- Installation Best Practices (step by step + torque patterns + reuse guide)
-- Threadlocker Guide (purple/blue/red/green + application guide + removal)
-- Anti-Seize Compound Guide (5 types + torque factors + application guide)
-- Galvanic Corrosion Chart (galvanic series + common pairs + prevention + explainer)
-
-**Total artifacts built:** 18 complete features
-
-**Still buildable without your input:**
-- Bolt dimensions chart
-- Nut dimensions chart
-- Washer sizes chart
-- Proof load & tensile strength tables
-- Hardness reference chart
-- Fastener material guide
-- Coating identification guide
-
-Want me to keep going?",
-    "citations": []
-  }
 
 
 // ════════════════════════════════════════════════════
 // ThreadlockerGuide
 // ════════════════════════════════════════════════════
-
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: Henkel/Loctite product technical data sheets,

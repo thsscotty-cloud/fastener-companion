@@ -327,18 +327,10 @@ const MEASUREMENT_TYPES = [
   },
 ];
 
-```
-
-Glossary done — 80+ terms across 13 categories. Now building **Fastener Failure Analysis.**",
-    "citations": []
-  }
-
 
 // ════════════════════════════════════════════════════
 // FailureAnalysis
 // ════════════════════════════════════════════════════
-
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: ARP (Automotive Racing Products) failure analysis guide,

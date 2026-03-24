@@ -327,18 +327,10 @@ const MEASUREMENT_TYPES = [
   },
 ];
 
-```
-
-How to Measure done. Moving straight to the next one — **Fastener Nomenclature & Callout Guide.**",
-    "citations": []
-  }
-
 
 // ════════════════════════════════════════════════════
 // Nomenclature
 // ════════════════════════════════════════════════════
-
-import { useState } from "react";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // Sources: ASME B18.2.1, ASME B18.24, ASME B1.1, ISO 898-1,
