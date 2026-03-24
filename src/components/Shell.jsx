@@ -1,5 +1,109 @@
 import { useState } from "react";
 
+// ─── SCREEN COMPONENT IMPORTS ─────────────────────────────────────────────────
+import TapDrillChart from './TapDrillChart.jsx';
+import TorqueChart from './TorqueChart.jsx';
+import ThreadPitchChart from './ThreadPitchChart.jsx';
+import GradeMarkings from './GradeMarkings.jsx';
+import DecimalEquivalent from './DecimalEquivalent.jsx';
+import WrenchSocket from './WrenchSocket.jsx';
+import Converter from './Converter.jsx';
+import HowToMeasure from './HowToMeasure.jsx';
+import Nomenclature from './Nomenclature.jsx';
+import TopStandards from './TopStandards.jsx';
+import Glossary from './Glossary.jsx';
+import FailureAnalysis from './FailureAnalysis.jsx';
+import InstallationBestPractices from './InstallationBestPractices.jsx';
+import ThreadlockerGuide from './ThreadlockerGuide.jsx';
+import AntiSeizeGuide from './AntiSeizeGuide.jsx';
+import GalvanicCorrosion from './GalvanicCorrosion.jsx';
+import CoatingGuide from './CoatingGuide.jsx';
+import FastenerMaterialGuide from './FastenerMaterialGuide.jsx';
+import TemperatureRatingReference from './TemperatureRatingReference.jsx';
+import ChemicalResistanceReference from './ChemicalResistanceReference.jsx';
+import DriveTypeGuide from './DriveTypeGuide.jsx';
+import BoltDimensions from './BoltDimensions.jsx';
+import NutDimensions from './NutDimensions.jsx';
+import WasherSizes from './WasherSizes.jsx';
+import ProofLoadTensile from './ProofLoadTensile.jsx';
+import HardnessReference from './HardnessReference.jsx';
+import DesignAdvisor from './DesignAdvisor.jsx';
+import SubstitutionAdvisor from './SubstitutionAdvisor.jsx';
+import ConflictChecker from './ConflictChecker.jsx';
+import TorqueCalculator from './TorqueCalculator.jsx';
+import ThreadEngagement from './ThreadEngagement.jsx';
+import PreloadCalculator from './PreloadCalculator.jsx';
+import BoltLengthGuide from './BoltLengthGuide.jsx';
+import FastenerTypeReference from './FastenerTypeReference.jsx';
+import ClearanceHoles from './ClearanceHoles.jsx';
+import CboreCsink from './CboreCsink.jsx';
+import WeightCount from './WeightCount.jsx';
+import PipeThreadReference from './PipeThreadReference.jsx';
+import VibrationGuide from './VibrationGuide.jsx';
+import StandardsReference from './StandardsReference.jsx';
+import ConditionAssessment from './ConditionAssessment.jsx';
+import StorageHandling from './StorageHandling.jsx';
+import AnchorBoltReference from './AnchorBoltReference.jsx';
+import FlangeBoltChart from './FlangeBoltChart.jsx';
+import CertificationGuide from './CertificationGuide.jsx';
+import IndustryGuide from './IndustryGuide.jsx';
+
+// ─── SCREEN → COMPONENT MAP ───────────────────────────────────────────────────
+const SCREEN_COMPONENTS = {
+  // Quick Access
+  "tap-drill":        TapDrillChart,
+  "torque-chart":     TorqueChart,
+  "thread-pitch":     ThreadPitchChart,
+  "grade-markings":   GradeMarkings,
+  "decimal-equiv":    DecimalEquivalent,
+  "wrench-socket":    WrenchSocket,
+  "conversion-calc":  Converter,
+  // Reference Guides
+  "how-to-measure":   HowToMeasure,
+  "nomenclature":     Nomenclature,
+  "standards-plain":  TopStandards,
+  "glossary":         Glossary,
+  "failure-analysis": FailureAnalysis,
+  "installation":     InstallationBestPractices,
+  "threadlocker":     ThreadlockerGuide,
+  "anti-seize":       AntiSeizeGuide,
+  "galvanic":         GalvanicCorrosion,
+  "coating-plating":  CoatingGuide,
+  "material-guide":   FastenerMaterialGuide,
+  "temp-rating":      TemperatureRatingReference,
+  "chemical-resist":  ChemicalResistanceReference,
+  "drive-types":      DriveTypeGuide,
+  "bolt-dims":        BoltDimensions,
+  "nut-dims":         NutDimensions,
+  "washer-sizes":     WasherSizes,
+  "proof-load":       ProofLoadTensile,
+  "hardness":         HardnessReference,
+  // Advisory
+  "design-advisor":   DesignAdvisor,
+  "sub-advisor":      SubstitutionAdvisor,
+  "spec-conflict":    ConflictChecker,
+  // Calculators
+  "torque-calc":      TorqueCalculator,
+  "thread-engage":    ThreadEngagement,
+  "preload-calc":     PreloadCalculator,
+  "bolt-length":      BoltLengthGuide,
+  // Dimensional Reference
+  "visual-ref":       FastenerTypeReference,
+  "clearance-holes":  ClearanceHoles,
+  "counterbore":      CboreCsink,
+  "weight-count":     WeightCount,
+  // Systems & Applications
+  "pipe-thread":      PipeThreadReference,
+  "vibration":        VibrationGuide,
+  "standards-xref":   StandardsReference,
+  "condition-assess": ConditionAssessment,
+  "storage-handling": StorageHandling,
+  "anchor-bolt":      AnchorBoltReference,
+  "flange-bolt":      FlangeBoltChart,
+  "cert-docs":        CertificationGuide,
+  "industry-app":     IndustryGuide,
+};
+
 // ─── DESIGN TOKENS ────────────────────────────────────────────────────────────
 const C = {
   navy:    "#1B3A6B",
@@ -626,6 +730,13 @@ export default function FastenerCompanion() {
         </>
       );
     }
+    const ScreenComponent = SCREEN_COMPONENTS[screen];
+    if (ScreenComponent) return (
+      <>
+        <ScreenComponent onBack={goBack} onUpgrade={goUpgrade} />
+        <BottomNav active={navTab} onChange={id => { setNavTab(id); setScreen(null); }} />
+      </>
+    );
     return (
       <>
         <PlaceholderScreen id={screen} onBack={goBack} onUpgrade={goUpgrade} />
