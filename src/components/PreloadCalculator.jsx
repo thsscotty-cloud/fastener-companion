@@ -268,9 +268,9 @@ export default function PreloadCalculator() {
     if (system === "imperial") {
       // Imperial: F in lbs, T in ft-lb, d in inches
       const sizeData = size.split("-");
-      const d = parseFloat(sizeData[0].replace(/\//g, "/").includes("/")
-        ? eval(sizeData[0].replace(" ", "+"))
-        : sizeData[0]);
+      const d = sizeData[0].includes("/")
+        ? sizeData[0].split("/").reduce((a, b) => parseFloat(a) / parseFloat(b))
+        : parseFloat(sizeData[0]);
       const F_proof = proofStrength * STRESS_AREAS_IMP[size]; // max proof load (lbs)
       const F_target = F_proof * p; // target clamp load (lbs)
       const T_inlb = k * d * 12 * F_target;
