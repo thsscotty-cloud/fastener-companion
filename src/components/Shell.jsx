@@ -47,6 +47,8 @@ import AnchorBoltReference from './AnchorBoltReference.jsx';
 import FlangeBoltChart from './FlangeBoltChart.jsx';
 import CertificationGuide from './CertificationGuide.jsx';
 import IndustryGuide from './IndustryGuide.jsx';
+import UncUnfReference from './UncUnfReference.jsx';
+import DrillBitSizes from './DrillBitSizes.jsx';
 
 // ─── SCREEN → COMPONENT MAP ───────────────────────────────────────────────────
 const SCREEN_COMPONENTS = {
@@ -58,6 +60,8 @@ const SCREEN_COMPONENTS = {
   "decimal-equiv":    DecimalEquivalent,
   "wrench-socket":    WrenchSocket,
   "conversion-calc":  Converter,
+  "unc-unf":          UncUnfReference,
+  "drill-bit-sizes":  DrillBitSizes,
   // Reference Guides
   "how-to-measure":   HowToMeasure,
   "nomenclature":     Nomenclature,
